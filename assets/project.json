@@ -1,0 +1,24 @@
+{
+  "projectType": "library",
+  "root": "libs/web/shared/assets",
+  "sourceRoot": "libs/web/shared/assets/src",
+  "prefix": "ppgt",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/shared/assets"],
+      "options": {
+        "jestConfig": "libs/web/shared/assets/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/web/shared/assets/src/**/*.ts", "libs/web/shared/assets/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": ["platform:web", "scope:shared", "type:shared"]
+}
