@@ -1,0 +1,24 @@
+{
+  "projectType": "library",
+  "root": "libs/web/scheduler/ui",
+  "sourceRoot": "libs/web/scheduler/ui/src",
+  "prefix": "ppgt",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/web/scheduler/ui"],
+      "options": {
+        "jestConfig": "libs/web/scheduler/ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/web/scheduler/ui/src/**/*.ts", "libs/web/scheduler/ui/src/**/*.html"]
+      },
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": ["platform:web", "scope:scheduler", "type:ui"]
+}
